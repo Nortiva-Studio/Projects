@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       SEO — troque estas tags a cada novo projeto duplicado
+  ============================================================= -->
+  <title>Mercadinho São João — Case Study | Nortiva Studio</title>
+  <meta name="description" content="Landing page desenvolvida pela Nortiva Studio para o Mercadinho São João: mais presença digital e contato direto com clientes.">
+  <meta name="author" content="Nortiva Studio">
+  <meta property="og:title" content="Mercadinho São João — Case Study | Nortiva Studio">
+  <meta property="og:description" content="Uma experiência digital criada para fortalecer a presença online do comércio e facilitar o contato com seus clientes.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#09090B">
+  <link rel="icon" href="data:,">
+
+  <!-- Fontes: Clash Display (headlines), Inter (corpo), JetBrains Mono (labels/tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — fixo, com blur, aparece "sólido" ao rolar a página
+  ============================================================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Nortiva<span class="logo__dot">Studio</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#projetos" class="nav__link">Projetos</a>
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="nav__link">GitHub</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#" class="btn btn--primary btn--sm">Visitar Site</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO — apresentação do projeto
+    ============================================================= -->
+    <section class="hero" id="hero">
+      <div class="hero__field" aria-hidden="true"></div>
+      <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="reveal" data-reveal>
+          <span class="eyebrow">N· 01 — CASE STUDY</span>
+          <h1 class="hero__title">Mercadinho<br>São João</h1>
+          <p class="hero__category">Landing Page <span class="dot-sep">•</span> Negócio Local</p>
+          <p class="hero__desc">
+            Uma experiência digital criada para fortalecer a presença online do comércio
+            e facilitar o contato com seus clientes.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary">Ver Projeto Online</a>
+            <a href="#" class="btn btn--ghost">Código Fonte</a>
+          </div>
+        </div>
+
+        <!-- Mockup do projeto: substitua o conteúdo de .mockup__screen por uma <img> real -->
+        <div class="mockup reveal" data-reveal data-reveal-delay="150">
+          <div class="mockup__frame">
+            <div class="mockup__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup__screen">
+              <!-- Placeholder de conteúdo — troque por <img src="assets/preview.jpg" alt="..."> -->
+              <div class="mockup__placeholder">
+                <div class="mockup__line mockup__line--w60"></div>
+                <div class="mockup__line mockup__line--w40"></div>
+                <div class="mockup__block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INFO DO PROJETO — ficha técnica
+    ============================================================= -->
+    <section class="info">
+      <div class="container info__grid">
+        <div class="info__item reveal" data-reveal>
+          <span class="info__label">Cliente</span>
+          <span class="info__value">Mercadinho São João</span>
+        </div>
+        <div class="info__item reveal" data-reveal data-reveal-delay="80">
+          <span class="info__label">Categoria</span>
+          <span class="info__value">Landing Page</span>
+        </div>
+        <div class="info__item reveal" data-reveal data-reveal-delay="160">
+          <span class="info__label">Tecnologias</span>
+          <span class="info__value">HTML · CSS · JavaScript · Vercel</span>
+        </div>
+        <div class="info__item reveal" data-reveal data-reveal-delay="240">
+          <span class="info__label">Ano</span>
+          <span class="info__value">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE O PROJETO — problema, solução, resultado
+    ============================================================= -->
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Sobre o projeto</span>
+          <h2 class="section-title">Do problema à solução</h2>
+        </div>
+
+        <div class="about__grid">
+          <article class="about__card reveal" data-reveal>
+            <span class="about__num">01</span>
+            <h3 class="about__title">O Problema</h3>
+            <p class="about__text">
+              O comércio não possuía presença digital, o que dificultava o contato com
+              clientes e a divulgação de produtos e promoções.
+            </p>
+          </article>
+
+          <article class="about__card reveal" data-reveal data-reveal-delay="120">
+            <span class="about__num">02</span>
+            <h3 class="about__title">A Solução</h3>
+            <p class="about__text">
+              Desenvolvemos uma landing page rápida e objetiva, otimizada para dispositivos
+              móveis, com foco em contato direto via WhatsApp e nos diferenciais do negócio.
+            </p>
+          </article>
+
+          <article class="about__card reveal" data-reveal data-reveal-delay="240">
+            <span class="about__num">03</span>
+            <h3 class="about__title">O Resultado</h3>
+            <p class="about__text">
+              Mais visibilidade online, contato facilitado com clientes e uma presença
+              digital alinhada à qualidade do atendimento da loja.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALERIA — screenshots do projeto
+    ============================================================= -->
+    <section class="gallery" id="projetos">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Galeria</span>
+          <h2 class="section-title">Cada detalhe, pensado</h2>
+        </div>
+
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item--main reveal" data-reveal>
+            <div class="gallery__shot gallery__shot--gradient1"></div>
+            <figcaption>Screenshot principal</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-reveal data-reveal-delay="100">
+            <div class="gallery__shot gallery__shot--gradient2"></div>
+            <figcaption>Desktop preview</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-reveal data-reveal-delay="200">
+            <div class="gallery__shot gallery__shot--gradient3"></div>
+            <figcaption>Mobile preview</figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--wide reveal" data-reveal data-reveal-delay="300">
+            <div class="gallery__shot gallery__shot--gradient4"></div>
+            <figcaption>Detalhes da interface</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECNOLOGIAS UTILIZADAS
+    ============================================================= -->
+    <section class="stack">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Stack</span>
+          <h2 class="section-title">Tecnologias utilizadas</h2>
+        </div>
+
+        <div class="stack__grid">
+          <div class="stack__item reveal" data-reveal>
+            <svg viewBox="0 0 24 24" class="stack__icon"><path fill="currentColor" d="M3 2l1.64 18.36L12 22l7.36-1.64L21 2H3zm14.5 5.5H8.2l.2 2.2h8.7l-.6 6.6-4.5 1.2-4.5-1.2-.3-3.3h2.2l.15 1.6 2.45.65 2.45-.65.25-2.75H7.7l-.6-6.6h10.9l-.5 2.05z"/></svg>
+            <span>HTML5</span>
+          </div>
+          <div class="stack__item reveal" data-reveal data-reveal-delay="60">
+            <svg viewBox="0 0 24 24" class="stack__icon"><path fill="currentColor" d="M3 2l1.64 18.36L12 22l7.36-1.64L21 2H3zm13.6 6.5H8.9l.2 2.1h7.3l-.55 6-4.35 1.2-4.35-1.2-.28-3h2.1l.14 1.5 2.4.63 2.4-.63.28-3H8.15l-.6-6.6h9.6z"/></svg>
+            <span>CSS3</span>
+          </div>
+          <div class="stack__item reveal" data-reveal data-reveal-delay="120">
+            <svg viewBox="0 0 24 24" class="stack__icon"><path fill="currentColor" d="M3 3h18v18H3V3zm14.2 14.3c-.3-1.8-1.5-2.6-2.9-3.2-.5-.2-1-.4-1-1 0-.4.3-.8.9-.8.6 0 1 .3 1.3.8l1.4-.9c-.5-1-1.4-1.5-2.7-1.5-1.8 0-2.9 1.1-2.9 2.5 0 1.6 1.1 2.3 2.4 2.8.9.3 1.5.5 1.5 1.1 0 .5-.4.9-1.1.9-.9 0-1.4-.4-1.8-1.1l-1.5.9c.5 1.2 1.7 1.9 3.3 1.9 1.9 0 3.1-1 3.1-2.4zm-6.6-4.8H8.9v5.1c0 .9-.3 1.2-.9 1.2-.5 0-.9-.3-1.2-.8l-1.4.9c.5 1 1.4 1.6 2.7 1.6 1.6 0 2.6-.9 2.6-2.7v-5.3z"/></svg>
+            <span>JavaScript</span>
+          </div>
+          <div class="stack__item reveal" data-reveal data-reveal-delay="180">
+            <svg viewBox="0 0 24 24" class="stack__icon"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.17c0 4.47 2.87 8.26 6.84 9.6.5.1.68-.22.68-.48v-1.87c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.55 2.34 1.11 2.91.84.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.48A10.02 10.02 0 0 0 22 12.17C22 6.58 17.52 2 12 2z"/></svg>
+            <span>GitHub</span>
+          </div>
+          <div class="stack__item reveal" data-reveal data-reveal-delay="240">
+            <svg viewBox="0 0 24 24" class="stack__icon"><path fill="currentColor" d="M12 3L2 20h20L12 3z"/></svg>
+            <span>Vercel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESULTADO FINAL — statement de encerramento
+    ============================================================= -->
+    <section class="statement">
+      <div class="container">
+        <p class="statement__eyebrow reveal" data-reveal>Resultado final</p>
+        <h2 class="statement__title reveal" data-reveal data-reveal-delay="80">
+          Uma experiência digital criada para <span class="statement__glow">conectar marcas e pessoas.</span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJETOS RELACIONADOS
+    ============================================================= -->
+    <section class="related">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Mais projetos</span>
+          <h2 class="section-title">Projetos relacionados</h2>
+        </div>
+
+        <div class="related__grid">
+          <a href="#" class="related__card reveal" data-reveal>
+            <div class="related__thumb related__thumb--a"></div>
+            <div class="related__info">
+              <h3>Local Businesses</h3>
+              <span>Website Institucional</span>
+            </div>
+          </a>
+          <a href="#" class="related__card reveal" data-reveal data-reveal-delay="100">
+            <div class="related__thumb related__thumb--b"></div>
+            <div class="related__info">
+              <h3>Nortiva Pay</h3>
+              <span>Sistema Web</span>
+            </div>
+          </a>
+          <a href="#" class="related__card reveal" data-reveal data-reveal-delay="200">
+            <div class="related__thumb related__thumb--c"></div>
+            <div class="related__info">
+              <h3>Dashboard System</h3>
+              <span>Aplicação Digital</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">Nortiva<span class="logo__dot">Studio</span></a>
+        <p>Design, tecnologia e inovação.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <span class="footer__col-title">Navegação</span>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__col-title">Social</span>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__col-title">Contato</span>
+          <a href="mailto:contato@nortivastudio.com">contato@nortivastudio.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Nortiva Studio. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
