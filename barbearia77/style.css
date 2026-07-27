@@ -55,7 +55,7 @@ linear-gradient(
 rgba(20, 25, 37, 0.85),
 rgba(16, 56, 92, 0.35)
 ),
-url("/assets/ambiente/image1.jpeg");
+url("../assets/ambiente/image1.jpeg");
 
 background-size:cover;
 background-position:center;
