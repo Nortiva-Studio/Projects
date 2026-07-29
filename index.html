@@ -1,100 +1,280 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal - Nortiva </title>
-  <meta name="description" content="Acompanhe lançamentos, melhorias, correções de bugs e novidades dos produtos da Nortiva.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (data/versões) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Nortiva Studio</title>
 
-  <link rel="icon" href="assets/images/favicon.png" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+    background:#000;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+.container{
+
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+
+}
+
+
+.logo{
+
+    font-size:60px;
+    font-weight:800;
+    letter-spacing:-3px;
+
+}
+
+.logo span{
+
+    color:#0196b2;
+
+}
+
+
+.subtitle{
+
+    color:#888;
+    margin-top:20px;
+    font-size:18px;
+
+}
+
+
+/* Projetos */
+
+.projects{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#080808;
+
+    border:1px solid #1c1c1c;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:left;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#0196b2;
+
+}
+
+
+.card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+
+
+.content{
+
+    padding:25px;
+
+}
+
+
+
+.content h2{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.content p{
+
+    color:#888;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+
+.button{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 18px;
+
+    background:#0196b2;
+
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+</style>
+
 </head>
+
+
 <body>
 
-  <!-- ============================================================ -->
-  <!-- HERO                                                          -->
-  <!-- ============================================================ -->
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="hero-grid"></div>
-      <div class="hero-glow"></div>
-    </div>
+
+<div class="container">
 
 
-    <div class="hero-content">
-      <span class="badge badge--eyebrow">Projetos</span>
-      <h1 class="hero-title">Todas os projetos da <span class="hero-title-accent">Nortiva</span></h1>
-      <p class="hero-subtitle">
-        Acompanhe lançamentos, melhorias, correções de bugs e novidades dos nossos produtos.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
-  <!-- TIMELINE / JOURNAL                                            -->
-  <!-- ============================================================ -->
-  <main class="journal">
-    <div class="journal-container">
-
-      <div class="rail" aria-hidden="true">
-        <div class="rail-track"></div>
-      </div>
-
-      <div class="entries">
-
-        <!-- ========================================================= -->
-        <!-- ENTRY — v1.3.0                                             -->
-        <!-- ========================================================= -->
-        <article class="entry reveal" data-category="cloud" id="v1.0.0">
-          <div class="entry-node" aria-hidden="true"><span class="entry-node-dot"></span></div>
-
-          <div class="entry-card">
-            <header class="entry-head">
-              <span class="cat-badge cat-badge--cloud">
-                <span class="cat-dot"></span>Cloud
-              </span>
-              <span class="entry-version"></span>
-              <time class="entry-date" datetime="2026-07-25">25 jul 2026</time>
-            </header>
-
-            <h2 class="entry-title">Algo grande está sendo construído. 👀☁️</h2>
-
-             <div class="entry-image">
-              <img src="" alt="https://portalnortiva.vercel.app/assets/images/cloud.jpg" loading="lazy">
-            </div>
-
-            <footer class="entry-footer">
-              <span class="entry-author">Equipe Nortiva</span>
-            </footer>
-          </div>
-        </article>
-        
-        <div class="entries-end">
-          <span class="entries-end-dot" aria-hidden="true"></span>
-          <p>Você chegou ao início dos projetos.</p>
-        </div>
-
-      </div>
-    </div>
-  </main>
+<div class="logo">
+    Nortiva <span>Studio</span>
+</div>
 
 
-  
-  <!-- ============================================================ -->
-  <!-- FOOTER                                                        -->
-  <!-- ============================================================ -->
+<p class="subtitle">
+Projetos desenvolvidos pela Nortiva Studio.
+</p>
 
-<footer class="footer-simple">
 
-  © 2026 NORTIVA • 
-  <a href="https://github.com/nortiva"  target="_blank">GitHub</a> 
-</footer>
 
-  <script src="assets/js/script.js"></script>
+<section class="projects">
+
+
+<div class="card">
+
+<img src="b4rbearia77/assets/logo.jpg" alt="Projeto">
+
+<div class="content">
+
+<h2>Barbearia 77</h2>
+
+<p>
+Landing page moderna criada para barbearia apresentar seus serviços com estilo e profissionalismo.
+</p>
+
+<a class="button" href="#">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img src="armazém-soares/assets/logo.png" alt="Projeto">
+
+<div class="content">
+
+<h2>Armazém do Soares</h2>
+
+<p>
+Landing page comercial desenvolvida para apresentação de produtos.
+</p>
+
+<a class="button" href="#">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="aromas-do-campo/assets/aromasdocampo.png" alt="Projeto">
+
+<div class="content">
+
+<h2>Aromas do Campo</h2>
+
+<p>
+Experiência digital criada para destacar produtos artesanais, transmitindo elegância, conforto e a identidade da marca.
+</p>
+
+<a class="button" href="#">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+</div>
+
+
 </body>
+
 </html>
