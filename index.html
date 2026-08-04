@@ -2,114 +2,278 @@
 <html lang="pt-BR">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nortiva Studio</title>
 
-    <title>Nortiva Studio | Projetos</title>
+<style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+body{
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    min-height:100vh;
+    background:#000;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+.container{
+
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+
+}
+
+
+.logo{
+
+    font-size:60px;
+    font-weight:800;
+    letter-spacing:-3px;
+
+}
+
+.logo span{
+
+    color:#0196b2;
+
+}
+
+
+.subtitle{
+
+    color:#888;
+    margin-top:20px;
+    font-size:18px;
+
+}
+
+
+/* Projetos */
+
+.projects{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#080808;
+
+    border:1px solid #1c1c1c;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:left;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#0196b2;
+
+}
+
+
+.card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+
+
+.content{
+
+    padding:25px;
+
+}
+
+
+
+.content h2{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.content p{
+
+    color:#888;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+
+.button{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 18px;
+
+    background:#0196b2;
+
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+</style>
 
 </head>
 
+
 <body>
 
-    <main class="container">
 
-        <header class="hero">
+<div class="container">
 
-            <h1>
 
-                Nortiva
-                <span>Studio</span>
+<div class="logo">
+    Nortiva <span>Studio</span>
+</div>
 
-            </h1>
 
-            <p>
-                Projetos desenvolvidos pela Nortiva Studio.
-            </p>
-
-        </header>
+<p class="subtitle">
+Projetos desenvolvidos pela Nortiva Studio.
+</p>
 
 
 
-        <section class="projects">
-
-            <article class="card">
-
-                <img src="/assets/projetos/barbearia77.png" alt="Barbearia 77">
-
-                <div class="content">
-
-                    <h2>Barbearia 77</h2>
-
-                    <p>
-                        Landing page moderna criada para barbearia apresentar seus serviços com estilo e profissionalismo.
-                    </p>
-
-                    <a href="#" class="button">
-                        Ver projeto
-                    </a>
-
-                </div>
-
-            </article>
+<section class="projects">
 
 
+<div class="card">
 
-            <article class="card">
+<img src="b4rbearia77/assets/logo.jpg" alt="Projeto">
 
-                <img src="/" alt="Armazém do Soares">
+<div class="content">
 
-                <div class="content">
+<h2>Barbearia 77</h2>
 
-                    <h2>Armazém do Soares</h2>
+<p>
+Landing page moderna criada para barbearia apresentar seus serviços com estilo e profissionalismo.
+</p>
 
-                    <p>
-                        Landing page comercial desenvolvida para apresentação de produtos.
-                    </p>
+<a class="button" href="#">
+Ver projeto
+</a>
 
-                    <a href="#" class="button">
-                        Ver projeto
-                    </a>
+</div>
 
-                </div>
-
-            </article>
+</div>
 
 
 
-            <article class="card">
 
-                <img src="/assets/projetos/aromasdocampo.png" alt="Aromas do Campo">
+<div class="card">
 
-                <div class="content">
+<img src="armazém-soares/assets/logo.png" alt="Projeto">
 
-                    <h2>Aromas do Campo</h2>
+<div class="content">
 
-                    <p>
-                        Experiência digital criada para destacar produtos artesanais, transmitindo elegância, conforto e identidade.
-                    </p>
+<h2>Armazém do Soares</h2>
 
-                    <a href="#" class="button">
-                        Ver projeto
-                    </a>
+<p>
+Landing page comercial desenvolvida para apresentação de produtos.
+</p>
 
-                </div>
+<a class="button" href="#">
+Ver projeto
+</a>
 
-            </article>
+</div>
 
-        </section>
+</div>
 
-    </main>
 
-    <script src="assets/js/javascript.js"></script>
+
+
+
+<div class="card">
+
+<img src="aromas-do-campo/assets/aromasdocampo.png" alt="Projeto">
+
+<div class="content">
+
+<h2>Aromas do Campo</h2>
+
+<p>
+Experiência digital criada para destacar produtos artesanais, transmitindo elegância, conforto e a identidade da marca.
+</p>
+
+<a class="button" href="#">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+</div>
+
 
 </body>
 
