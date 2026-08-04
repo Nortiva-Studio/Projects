@@ -1,11 +1,4 @@
-/* ========================================
-   NORTIVA • JOURNAL.CSS
-   Parte 1
-======================================== */
-
-/* ========================================
-   RESET
-======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     margin:0;
@@ -13,928 +6,139 @@
     box-sizing:border-box;
 }
 
-:root{
-
-    /* Cores */
-
-    --bg:#0c0516;
-
-    --bg-elevated:#10081c;
-
-    --card:#160e22;
-
-    --border:rgba(255,255,255,.08);
-
-    --border-hover:rgba(255,255,255,.16);
-
-    --primary:#8001b2;
-
-    --primary-bright:#8312e0;
-
-    --text:#ffffff;
-
-    --text-secondary:#a7b0c0;
-
-    --text-tertiary:#6b7385;
-
-    /* Categorias */
-
-    --cat-novo:#22c55e;
-
-    --cat-atualizacao:#3b82f6;
-
-    --cat-correcao:#f59e0b;
-
-    --cat-seguranca:#41330f;
-
-    --cat-cloud:#38bdf8;
-
-    --cat-design:#a855f7;
-
-    --cat-institucional:#94a3b8;
-
-    --cat-performance:#84cc16;
-
-    --cat-atencao:#ff0000;
-
-
-    /* Tipografia */
-
-    --font-display:'Space Grotesk','Segoe UI',sans-serif;
-
-    --font-body:'Inter','Segoe UI',sans-serif;
-
-    --font-mono:'JetBrains Mono','SFMono-Regular',Consolas,monospace;
-
-    /* Layout */
-
-    --radius-sm:8px;
-
-    --radius-md:14px;
-
-    --radius-lg:18px;
-
-    --max-width:720px;
-
-    --transition:.2s ease;
-
-}
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-@media (prefers-reduced-motion:reduce){
-
-    html{
-
-        scroll-behavior:auto;
-
-    }
-
-    *,
-    *::before,
-    *::after{
-
-        animation-duration:.001ms !important;
-
-        transition-duration:.001ms !important;
-
-    }
-
-}
-
 body{
-
-    font-family:var(--font-body);
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    line-height:1.6;
-
-    -webkit-font-smoothing:antialiased;
-
+    font-family:"Inter",sans-serif;
+    background:#000;
+    color:#fff;
 }
 
-h1,
-h2,
-h3,
-h4{
-
-    font-family:var(--font-display);
-
-    font-weight:600;
-
-    letter-spacing:-.01em;
-
-    line-height:1.2;
-
+.container{
+    width:min(1100px,92%);
+    margin:auto;
 }
 
-img{
+/* HERO */
 
-    max-width:100%;
+.hero{
+    text-align:center;
+    padding:60px 0 50px;
+}
 
+.hero h1{
+    font-size:64px;
+    font-weight:900;
+    letter-spacing:-3px;
+    margin-bottom:12px;
+}
+
+.hero span{
+    color:#0196b2;
+}
+
+.hero p{
+    font-size:18px;
+    color:#8e8e8e;
+}
+
+/* GRID */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:22px;
+    padding-bottom:60px;
+}
+
+/* CARD */
+
+.card{
+    background:#090909;
+    border:1px solid #1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#0196b2;
+    box-shadow:0 15px 35px rgba(1,150,178,.18);
+}
+
+.card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
     display:block;
-
 }
 
-a{
+/* CONTENT */
 
-    color:inherit;
+.content{
+    padding:22px;
+}
+
+.content h2{
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.content p{
+    color:#9b9b9b;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 18px;
+
+    background:#0196b2;
+    color:#fff;
 
     text-decoration:none;
 
-}
+    border-radius:12px;
 
-ul{
-
-    list-style:none;
-
-}
-
-::selection{
-
-    background:var(--primary);
-
-    color:#fff;
-
-}
-
-:focus-visible{
-
-    outline:2px solid var(--primary-bright);
-
-    outline-offset:3px;
-
-    border-radius:4px;
-
-}
-
-/* ========================================
-   BADGES
-======================================== */
-
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    padding:.4rem 1rem;
-
-    border-radius:999px;
-
-    font-family:var(--font-mono);
-
-    font-size:.72rem;
-
-    font-weight:500;
-
-    letter-spacing:.04em;
-
-    text-transform:uppercase;
-
-}
-
-.badge--eyebrow{
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid var(--border);
-
-    color:var(--text-secondary);
-
-}
-
-/* ========================================
-   BOTÕES
-======================================== */
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:.8rem;
-
-    padding:.6rem 1.1rem;
-
-    border-radius:999px;
-
-    font-size:.85rem;
-
-    font-weight:500;
-
-    transition:border-color var(--transition),color var(--transition);
-
-}
-
-.btn--ghost{
-
-    border:1px solid var(--border);
-
-    color:var(--text-secondary);
-
-}
-
-.btn--ghost:hover{
-
-    border-color:var(--border-hover);
-
-    color:var(--text);
-
-}
-
-/* ========================================
-   TAGS
-======================================== */
-
-.tag{
-
-    display:inline-block;
-
-    padding:.3rem .75rem;
-
-    border-radius:999px;
-
-    border:1px solid var(--border);
-
-    color:var(--text-secondary);
-
-    font-family:var(--font-mono);
-
-    font-size:.72rem;
-
-}
-
-/* ========================================
-   HERO
-======================================== */
-
-.hero{
-
-    position:relative;
-
-    padding:3.2rem 3.2rem 4.8rem;
-
-    overflow:hidden;
-
-}
-
-.hero-bg{
-
-    position:absolute;
-
-    inset:0;
-
-    z-index:-1;
-
-}
-
-.hero-grid{
-
-    position:absolute;
-
-    inset:-1px;
-
-    background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-
-    background-size:56px 56px;
-
-    mask-image:radial-gradient(ellipse 70% 55% at 50% 15%,black 40%,transparent 90%);
-
-}
-
-.hero-glow{
-
-    position:absolute;
-
-    width:560px;
-
-    height:560px;
-
-    top:-260px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    border-radius:50%;
-
-    filter:blur(100px);
-
-    background:radial-gradient(circle,rgba(1,150,178,.35),transparent 70%);
-
-}
-
-.hero-nav{
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 8%;
-
-    background: rgba(7, 7, 10, .7);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
-
-    z-index: 999;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #8b5cf6;
-}
-
-nav {
-    display: flex;
-    gap: 28px;
-}
-
-nav a {
-    color: #cbd5e1;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-
-}
-
-.brand-logo{
-
-    height:24px;
-
-}
-
-.hero-content{
-
-    max-width:680px;
-
-    margin:0 auto;
-
-    text-align:center;
-
-    padding:1.6rem 0 .8rem;
-
-}
-
-.hero-title{
-
-    font-size:clamp(2.1rem,4.6vw,3.2rem);
-
-    margin:1.2rem 0;
-
-}
-
-.hero-title-accent{
-
-    color:var(--primary-bright);
-
-}
-
-.hero-subtitle{
-
-    font-size:1.05rem;
-
-    color:var(--text-secondary);
-
-    max-width:480px;
-
-    margin:0 auto;
-
-}
-
-/* ========================================
-   FIM DA PARTE 1
-======================================== */
-
-/* ========================================
-   NORTIVA • JOURNAL.CSS
-   Parte 2
-======================================== */
-
-/* ========================================
-   TIMELINE
-======================================== */
-
-.journal{
-
-    padding:3.2rem 3.2rem 4.8rem;
-
-}
-
-.journal-container{
-
-    max-width:var(--max-width);
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:20px 1fr;
-
-    gap:1.6rem;
-
-}
-
-.rail-track{
-
-    width:1px;
-
-    height:100%;
-
-    margin:0 auto;
-
-    background:var(--border);
-
-}
-
-.entries{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:3.2rem;
-
-}
-
-.entries-end{
-
-    grid-column:2;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:.8rem;
-
-    color:var(--text-tertiary);
-
-    font-size:.85rem;
-
-}
-
-.entries-end-dot{
-
-    width:6px;
-
-    height:6px;
-
-    border-radius:50%;
-
-    background:var(--text-tertiary);
-
-}
-
-.entry{
-
-    display:grid;
-
-    grid-template-columns:20px 1fr;
-
-    gap:1.6rem;
-
-    margin-left:calc(-20px - 1.6rem);
-
-}
-
-.entry-node{
-
-    display:flex;
-
-    justify-content:center;
-
-    padding-top:1.2rem;
-
-}
-
-.entry-node-dot{
-
-    width:10px;
-
-    height:10px;
-
-    border-radius:50%;
-
-    background:var(--card);
-
-    border:2px solid var(--border);
-
-}
-
-.entry:hover .entry-node-dot{
-
-    border-color:var(--cat-color,var(--primary));
-
-}
-
-/* ========================================
-   ENTRY CARD
-======================================== */
-
-.entry-card{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    border-radius:var(--radius-lg);
-
-    padding:1.6rem;
-
-    transition:border-color var(--transition);
-
-}
-
-.entry-card:hover{
-
-    border-color:var(--cat-color,var(--border-hover));
-
-}
-
-.entry-head{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:.8rem;
-
-    margin-bottom:1.2rem;
-
-}
-
-.entry-version{
-
-    font-family:var(--font-mono);
-
-    font-size:.8rem;
-
-    color:var(--text-secondary);
-
-}
-
-.entry-date{
-
-    font-family:var(--font-mono);
-
-    font-size:.8rem;
-
-    color:var(--text-tertiary);
-
-    margin-left:auto;
-
-}
-
-.entry-title{
-
-    font-size:1.3rem;
-
-    margin-bottom:.8rem;
-
-}
-
-.entry-desc{
-
-    color:var(--text-secondary);
-
-    font-size:.95rem;
-
-    max-width:60ch;
-
-    margin-bottom:1.6rem;
-
-}
-
-.entry-image{
-
-    border-radius:var(--radius-md);
-
-    overflow:hidden;
-
-    border:1px solid var(--border);
-
-    margin-bottom:1.6rem;
-
-    aspect-ratio:16 / 9;
-
-}
-
-.entry-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-.entry-content-title{
-
-    font-family:var(--font-body);
-
-    font-size:.75rem;
-
-    text-transform:uppercase;
-
-    letter-spacing:.06em;
-
-    color:var(--text-tertiary);
-
+    font-size:14px;
     font-weight:600;
 
-    margin-bottom:.8rem;
-
+    transition:.3s;
 }
 
-.change-list{
-
-    display:grid;
-
-    gap:.8rem;
-
-    margin-bottom:1.6rem;
-
-    padding-bottom:1.6rem;
-
-    border-bottom:1px solid var(--border);
-
+.button:hover{
+    background:#01add0;
+    transform:translateY(-2px);
 }
 
-.change-list li{
+/* RESPONSIVO */
 
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:.8rem;
-
-    font-size:.92rem;
-
-    color:var(--text);
-
-}
-
-.check{
-
-    flex-shrink:0;
-
-    color:var(--cat-color,var(--primary-bright));
-
-    font-size:.85rem;
-
-    margin-top:.1rem;
-
-}
-
-.entry-footer{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:.8rem;
-
-}
-
-.entry-author{
-
-    margin-left:auto;
-
-    color:var(--text-tertiary);
-
-    font-size:.82rem;
-
-}
-
-/* ========================================
-   CATEGORIAS
-======================================== */
-
-.cat-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:.45rem;
-
-    font-size:.78rem;
-
-    font-weight:600;
-
-    color:var(--cat-color,var(--primary));
-
-}
-
-.cat-dot{
-
-    width:6px;
-
-    height:6px;
-
-    border-radius:50%;
-
-    background:var(--cat-color,var(--primary));
-
-}
-
-.entry[data-category="novo"]{ --cat-color:var(--cat-novo); }
-.entry[data-category="atualizacao"]{ --cat-color:var(--cat-atualizacao); }
-.entry[data-category="correcao"]{ --cat-color:var(--cat-correcao); }
-.entry[data-category="seguranca"]{ --cat-color:var(--cat-seguranca); }
-.entry[data-category="cloud"]{ --cat-color:var(--cat-cloud); }
-.entry[data-category="design"]{ --cat-color:var(--cat-design); }
-.entry[data-category="institucional"]{ --cat-color:var(--cat-institucional); }
-.entry[data-category="performance"]{ --cat-color:var(--cat-performance); }
-.entry[data-category="atencao"]{ --cat-color:var(--cat-atencao); }
-
-.entry-link {
-  color: #7e05cf;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .2s ease;
-}
-
-.entry-link:hover {
-  text-decoration: underline;
-  opacity: .8;
-}
-
-/* ========================================
-   CATEGORIA CELEBRATION (RGB DINÂMICO)
-======================================== */
-
-@keyframes rgb-cycler {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-.cat-badge--celebration {
-    /* Cor base (Rosa choque) para a matriz arco-íris */
-    --celebration-base: rgb(255, 0, 128);
-    
-    background: rgba(255, 0, 128, 0.08) !important;
-    color: var(--celebration-base) !important;
-    border: 1px solid rgba(255, 0, 128, 0.2) !important;
-    
-    /* Garante o formato de pílula arredondada sem sobras quadradas */
-    border-radius: 999px !important;
-    overflow: hidden !important;
-    background-clip: padding-box !important;
-    
-    /* Aplica a animação sem distorcer o layout */
-    animation: rgb-cycler 6s linear infinite !important;
-}
-
-/* Força a bolinha interna a seguir a mesma cor da animação */
-.cat-badge--celebration .cat-dot {
-    background-color: rgb(255, 0, 128) !important;
-    border-radius: 50% !important;
-}
-
-/* Ajuste do nó da timeline no hover */
-.entry[data-category="celebration"]:hover {
-    --cat-color: rgb(255, 0, 128);
-}
-
-
-
-/* ========================================
-   FIM DA PARTE 2
-======================================== */
-
-/* ========================================
-   NORTIVA • JOURNAL.CSS
-   Parte 3
-======================================== */
-
-/* ========================================
-   FOOTER
-======================================== */
-
-.footer-simple {
-    padding: 25px 8%;
-
-    text-align: center;
-
-    background: transparent;
-    color: #786b80;
-
-    border-top: 1px solid rgba(255, 255, 255, .06);
-
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-
-/* ========================================
-   ANIMAÇÃO DE ENTRADA
-======================================== */
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(10px);
-
-    transition:opacity .5s ease,transform .5s ease;
-
-}
-
-.reveal.is-visible{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-/* ========================================
-   RESPONSIVIDADE
-======================================== */
-
-@media (max-width:900px){
+@media(max-width:768px){
 
     .hero{
-
-        padding:1.6rem 1.6rem 2.4rem;
-
+        padding:40px 0;
     }
 
-    .journal{
-
-        padding:2.4rem 1.6rem 3.2rem;
-
+    .hero h1{
+        font-size:46px;
     }
 
-    .entry-card{
-
-        padding:1.2rem;
-
+    .hero p{
+        font-size:16px;
     }
 
-    .footer-columns{
+    .projects{
+        grid-template-columns:1fr;
+    }
 
-        gap:1.6rem;
-
+    .card img{
+        height:200px;
     }
 
 }
-
-@media (max-width:560px){
-
-    .hero-nav .btn--ghost span:not(.btn-arrow){
-
-        display:none;
-
-    }
-
-    .entry-date{
-
-        margin-left:0;
-
-        width:100%;
-
-        order:3;
-
-    }
-
-    .footer-container{
-
-        flex-direction:column;
-
-        gap:1.6rem;
-
-    }
-
-}
-
-/* ========================================
-   FIM DO ARQUIVO
-======================================== */
