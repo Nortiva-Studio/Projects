@@ -1,281 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="images/png" href="assets/logo.png">
-    
 <title>Nortiva Studio</title>
+<meta name="description" content="A Nortiva Studio é um estúdio digital focado em desenvolvimento web, design e criação de experiências digitais modernas para marcas que querem se destacar.">
+<meta name="keywords" content="software house, desenvolvimento web, design de interfaces, landing pages, sites institucionais, sistemas web, Nortiva Studio">
+<meta name="author" content="Nortiva Studio">
 
-<style>
+<meta property="og:title" content="Nortiva Studio — Estúdio Digital">
+<meta property="og:description" content="Construindo experiências digitais para marcas modernas.">
+<meta property="og:type" content="website">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,Arial,sans-serif;
-}
 
-body{
+<link rel="icon" type="images/png" href="../assets/logos/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    min-height:100vh;
-    background:#000;
-    color:white;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
-
-}
-
-
-.container{
-
-    width:100%;
-    max-width:1100px;
-    text-align:center;
-
-}
-
-
-.logo{
-
-    font-size:60px;
-    font-weight:800;
-    letter-spacing:-3px;
-
-}
-
-.logo span{
-
-    color:#0196b2;
-
-}
-
-
-.subtitle{
-
-    color:#888;
-    margin-top:20px;
-    font-size:18px;
-
-}
-
-
-/* Projetos */
-
-.projects{
-
-    margin-top:70px;
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:25px;
-
-}
-
-
-
-.card{
-
-    background:#080808;
-
-    border:1px solid #1c1c1c;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    text-align:left;
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#0196b2;
-
-}
-
-
-.card img{
-
-    width:100%;
-
-    height:200px;
-
-    object-fit:cover;
-
-}
-
-
-
-.content{
-
-    padding:25px;
-
-}
-
-
-
-.content h2{
-
-    font-size:22px;
-
-    margin-bottom:10px;
-
-}
-
-
-
-.content p{
-
-    color:#888;
-
-    font-size:15px;
-
-    line-height:1.6;
-
-}
-
-
-
-.button{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:10px 18px;
-
-    background:#0196b2;
-
-    color:white;
-
-    border-radius:10px;
-
-    text-decoration:none;
-
-    font-size:14px;
-
-    font-weight:600;
-
-}
-
-
-
-</style>
-
+<link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
 
+<!-- Skip link para acessibilidade -->
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-<div class="container">
+<!-- Background layers -->
+<div class="bg-grid" aria-hidden="true"></div>
 
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="Nortiva Studio — início">
+      <span class="logo-text">Nortiva<span class="logo-dot"> Studio.</span></span>
+    </a>
 
-<div class="logo">
-    Nortiva <span>Studio</span>
-</div>
-
-
-<p class="subtitle">
-Projetos desenvolvidos pela Nortiva Studio.
-</p>
-
-
-
-<section class="projects">
-
-
-<div class="card">
-
-<img src="barbearia77/assets/logo.jpg" alt="Projeto">
-
-<div class="content">
-
-<h2>Barbearia 77</h2>
-
-<p>
-Landing page moderna criada para barbearia apresentar seus serviços com estilo e profissionalismo.
-</p>
-
-<a class="button" href="https://thenortiva.netlify.app/barbearia77/">
-Ver projeto
-</a>
-
-</div>
-
-</div>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
 
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="mobileNav" aria-label="Navegação móvel">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
-<div class="card">
+<main id="main">
 
-<img src="armazem-soares/assets/logo.png" alt="Projeto">
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span>Estúdio digital de desenvolvimento &amp; design</p>
 
-<div class="content">
+      <h1 class="hero-title reveal">
+        Construindo experiências digitais<br>
+        para <span class="text-accent">marcas modernas.</span>
+      </h1>
 
-<h2>Armazém do Soares</h2>
+      <p class="hero-subtitle reveal">
+        Desenvolvemos sites, landing pages, interfaces e soluções digitais
+        com foco em design, tecnologia e performance.
+      </p>
 
-<p>
-Landing page comercial desenvolvida para apresentação de produtos.
-</p>
+      <div class="hero-actions reveal">
+        <a href="#projetos" class="btn btn-primary">
+          Ver Projetos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8h9m0 0L8.5 4m4 4L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#sobre" class="btn btn-secondary">Conhecer Studio</a>
+      </div>
 
-<a class="button" href="https://thenortiva.netlify.app/armazem-soares/">
-Ver projeto
-</a>
+      <div class="hero-meta reveal" aria-hidden="true">
+        <span>{ web }</span>
+        <span>{ design }</span>
+        <span>{ produto }</span>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ================= SOBRE ================= -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Sobre a Nortiva</p>
+        <h2 class="section-title">
+          Transformamos ideias em<br>experiências modernas.
+        </h2>
+        <p class="section-desc">
+          A Nortiva Studio é um estúdio digital focado em transformar ideias em
+          experiências modernas através de design e tecnologia.
+        </p>
+      </div>
 
-</div>
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20 16.5 7.5a2.1 2.1 0 0 1 3 3L7 23H4v-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 9.5 17.5 13" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Design</h3>
+          <p>Interfaces pensadas para clareza, hierarquia visual e uma experiência que guia o usuário sem esforço.</p>
+        </article>
 
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 9 3 14l5 5M16 9l5 5-5 5M13 5l-2 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Tecnologia</h3>
+          <p>Código sólido, performance como prioridade e arquitetura pensada para crescer junto com o negócio.</p>
+        </article>
 
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Inovação</h3>
+          <p>Buscamos abordagens atuais para cada projeto, sem repetir fórmulas prontas ou soluções genéricas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- ================= PROJETOS ================= -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Trabalhos selecionados</p>
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-desc">
+          Uma amostra do que construímos para negócios que confiaram na Nortiva.
+        </p>
+      </div>
 
+        <article class="project-row reveal">
+          <div class="project-info">
+            <span class="project-tag">Website · Sistema</span>
+            <h3>GymTrackify</h3>
+            <p>GymTrackify é um projeto focado em ajudar pessoas a registrarem e acompanharem seus treinos de forma simples e organizada. </p>
+          </div>
+          <div class="project-visual">
+            <div class="project-visual-grid" aria-hidden="true"></div>
+            <img src="../assets/projetos/gymtrackify.png" alt="Prévia do projeto Nortiva Pay" loading="lazy" onerror="this.style.display='none'">
+            <span class="project-visual-label" aria-hidden="true">gym-trackify</span>
+          </div>
+        </article>
 
-<div class="card">
+        <article class="project-row reveal">
+          <div class="project-info">
+            <span class="project-tag">Website</span>
+            <h3>Armazém do Soares</h3>
+            <p>Produtos alimentícios, itens agropecuários, rações, medicamentos veterinários e muito mais, com qualidade, variedade e atendimento de confiança.</p>
+          </div>
+          <div class="project-visual">
+            <div class="project-visual-grid" aria-hidden="true"></div>
+            <img src="../assets/projetos/armazemdosoares.png" alt="Prévia do projeto Armazém do Soares" loading="lazy" onerror="this.style.display='none'">
+            <span class="project-visual-label" aria-hidden="true">armazém-do-soares</span>
+          </div>
+        </article>
 
-<img src="aromas-do-campo/assets/aromasdocampo.png" alt="Projeto">
+        <article class="project-row reveal">
+          <div class="project-info">
+            <span class="project-tag">Website · LandingPage</span>
+            <h3>Aromas do Campo</h3>
+            <p>Aromatizadores de ambientes e lembrancinhas personalizadas, feitos artesanalmente para transformar momentos especiais em memórias inesquecíveis, com delicadeza, qualidade e fragrâncias marcantes.</p>
+          </div>
+          <div class="project-visual">
+            <div class="project-visual-grid" aria-hidden="true"></div>
+            <img src="../assets/projetos/aromasdocampo.png" alt="Prévia do projeto Aromas do Campo" loading="lazy" onerror="this.style.display='none'">
+            <span class="project-visual-label" aria-hidden="true">aromas-do-campo</span>
+          </div>
+        </article>
 
-<div class="content">
+      </div>
+    </div>
+  </section>
 
-<h2>Aromas do Campo</h2>
+  <!-- ================= CTA ================= -->
+  <section class="section cta-section" id="contato">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <h2>Vamos construir algo<br>incrível juntos.</h2>
+        <p>Conte um pouco sobre o seu projeto e retornamos em breve.</p>
+        <a href="https://api.whatsapp.com/send/?phone=%2B5538998337049&text&type=phone_number&app_absent=0" class="btn btn-primary btn-lg">
+          Entrar em contato
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8h9m0 0L8.5 4m4 4L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<p>
-Experiência digital criada para destacar produtos artesanais, transmitindo elegância, conforto e a identidade da marca.
-</p>
+</main>
 
-<a class="button" href="https://thenortiva.netlify.app/aromas-do-campo/">
-Ver projeto
-</a>
+<footer class="footer-simple">
 
-</div>
+  © 2026 NORTIVA STUDIO 
+ 
+</footer>
 
-</div>
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 12.5V3.5M8 3.5 3.5 8M8 3.5 12.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
 
-
-
-</section>
-
-
-
-</div>
-
-
+<script src="script.js"></script>
 </body>
-
 </html>
